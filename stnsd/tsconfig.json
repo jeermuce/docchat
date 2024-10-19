@@ -1,18 +1,16 @@
 {
     "compilerOptions": {
+        "lib": ["dom", "dom.iterable", "esnext"],
         "allowJs": true,
         "skipLibCheck": true,
         "strict": true,
-        "target": "ESNext",
-        "module": "ESNext",
-        "lib": ["DOM", "ESNext", "DOM.Iterable"],
-        "jsx": "preserve",
+        "noEmit": true,
         "esModuleInterop": true,
-        "allowSyntheticDefaultImports": true,
-        "moduleResolution": "node",
+        "module": "esnext",
+        "moduleResolution": "bundler",
         "resolveJsonModule": true,
         "isolatedModules": true,
-        "noEmit": true,
+        "jsx": "preserve",
         "incremental": true,
         "plugins": [
             {
