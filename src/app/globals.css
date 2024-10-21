@@ -100,6 +100,7 @@ h6 {
 }
 
 * {
+    outline: solid 1px red;
     box-sizing: border-box;
     margin: 0;
     padding: 0;
