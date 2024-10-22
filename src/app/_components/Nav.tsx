@@ -3,7 +3,7 @@ import React from "react";
 
 interface NavProps extends React.HTMLProps<HTMLUListElement> {
     className?: string;
-    children: React.ReactNode;
+    children?: React.ReactNode;
     variant?: "row" | "col";
     aria?: string;
 }
