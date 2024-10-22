@@ -8,6 +8,24 @@
     }
 }
 
+@media (prefers-color-scheme: light) {
+    * {
+        @apply light;
+    }
+}
+
+.github-icon {
+    fill: #fff;
+    /* Fill color for dark mode */
+}
+
+@media (prefers-color-scheme: light) {
+    .github-icon {
+        fill: #24292f;
+        /* Default fill color */
+    }
+}
+
 @layer base {
     .light {
         --background: 0 0% 98%;
@@ -100,7 +118,6 @@ h6 {
 }
 
 * {
-    outline: solid 1px red;
     box-sizing: border-box;
     margin: 0;
     padding: 0;
@@ -195,10 +212,19 @@ header {
 
 /* first child of footer and header */
 
-footer > *,
-header > *,
-main > * {
+footer>*,
+header>*,
+main>* {
     width: fit-content;
+}
+
+a {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: center;
+    @apply flex items-center w-full h-full
 }
 
 summary {
@@ -215,16 +241,17 @@ details {
     cursor: pointer;
 }
 
-.zcale > img:not(:hover) {
+.zcale>img:not(:hover) {
     animation: zcale 2s;
 }
 
-.zcale > img:hover {
+.zcale>img:hover {
     scale: 110%;
     z-index: 100;
 }
 
 @keyframes zcale {
+
     0%,
     100% {
         z-index: 100;
@@ -259,27 +286,25 @@ button {
 
 .content-grid {
     display: grid;
-    grid-template-columns: [all-start] 1fr [big-start] 1fr [mid-start] 1fr [sml-start] min(
-            80ch,
-            80%
-        ) [sml-end] 1fr [mid-end] 1fr [big-end] 1fr [all-end];
+    grid-template-columns: [all-start] 1fr [big-start] 1fr [mid-start] 1fr [sml-start] min(80ch,
+            80%) [sml-end] 1fr [mid-end] 1fr [big-end] 1fr [all-end];
     width: 100%;
     height: 100%;
     grid-auto-rows: min-content;
 }
 
-.content-grid > .big {
+.content-grid>.big {
     grid-column: big-start / big-end;
 }
 
-.content-grid > .mid {
+.content-grid>.mid {
     grid-column: mid-start / mid-end;
 }
 
-.content-grid > .all {
+.content-grid>.all {
     grid-column: all-start / all-end;
 }
 
-.content-grid > * {
+.content-grid>* {
     grid-column: sml-start / sml-end;
 }
