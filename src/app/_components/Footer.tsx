@@ -1,12 +1,14 @@
+"use client";
 import Link from "next/link";
 import type React from "react";
 import GhLogo from "./GhLogo";
 import Nav from "./Nav";
-import Wrapper from "./Wrapper";
 
-function Footer(props: React.HTMLProps<HTMLDivElement>) {
+import { cn } from "@/lib/utils";
+
+function Footer({ className, ...props }: { className?: string }) {
     return (
-        <footer className={`${props.className} content-grid w-full `}>
+        <footer className={cn(className, "content-grid w-full ")}>
             <div className="flex flex-row big flex-wrap justify-between w-full ">
                 <Nav aria="Internal links" variant="col">
                     <Link href="/about">

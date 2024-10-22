@@ -1,12 +1,15 @@
+import { cn } from "@/lib/utils";
 import type React from "react";
 
-function Main(
-    props: React.HTMLProps<HTMLDivElement>,
-
-    children: React.ReactNode,
-) {
+function Main({
+    children,
+    className,
+    ...props
+}: { children?: React.ReactNode; className?: string }) {
     return (
-        <main className={`${props.className} content-grid`}>{children}</main>
+        <main {...props} className={cn(className, "content-grid")}>
+            {children}
+        </main>
     );
 }
 
