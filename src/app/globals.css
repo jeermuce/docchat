@@ -10,7 +10,7 @@
 
 @media (prefers-color-scheme: light) {
     * {
-        @apply light;
+        outline: solid 1px red;
     }
 }
 
@@ -74,6 +74,7 @@
         --destructive-foreground: 176 57% 10%;
         --border: 0 0% 60%;
         --input: 0 0% 80%;
+        --radius: 0.5rem;
         --ring: 45 94% 60%;
         --chart-1: 220 70% 50%;
         --chart-2: 160 60% 45%;
@@ -284,6 +285,7 @@ button {
 }
 
 .content-grid {
+    position: relative;
     display: grid;
     grid-template-columns: [all-start] 1fr [big-start] 1fr [mid-start] 1fr [sml-start] min(
             80ch,
@@ -308,4 +310,6 @@ button {
 
 .content-grid > * {
     grid-column: sml-start / sml-end;
+    justify-self: center;
+    align-self: start;
 }
