@@ -6,9 +6,16 @@ import Nav from "./Nav";
 
 import { cn } from "@/lib/utils";
 
-function Footer({ className, ...props }: { className?: string }) {
+function Footer({
+    className,
+    zIndex,
+    ...props
+}: { className?: string; zIndex?: number }) {
     return (
-        <footer className={cn(className, "content-grid w-full ")}>
+        <footer
+            style={{ zIndex: zIndex }}
+            className={cn(className, "content-grid py-5  w-full ")}
+        >
             <div className="flex flex-row big flex-wrap justify-between w-full ">
                 <Nav aria="Internal links" variant="col">
                     <Link href="/about">
@@ -22,7 +29,11 @@ function Footer({ className, ...props }: { className?: string }) {
                     </Link>
                 </Nav>
                 <Nav aria="External links" variant="col">
-                    <a href="https://github.com/jeermuce/docchat">
+                    <a
+                        href="https://github.com/jeermuce/docchat "
+                        target="_blank"
+                        rel="noreferrer"
+                    >
                         <div className="w-12 rounded-full overflow-hidden">
                             <GhLogo />
                         </div>
