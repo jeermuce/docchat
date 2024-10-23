@@ -7,7 +7,6 @@ const config = {
         ignoreDuringBuilds: true,
     },
     reactStrictMode: true,
-    swcMinify: true,
 };
 
 export default config;
