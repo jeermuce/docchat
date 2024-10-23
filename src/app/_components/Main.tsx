@@ -11,7 +11,7 @@ function Main({
         <main
             style={{ zIndex: zIndex }}
             {...props}
-            className={cn(className, "content-grid")}
+            className={cn(className, "content-grid relative")}
         >
             {children}
         </main>
