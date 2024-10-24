@@ -25,7 +25,7 @@ function Header({
             >
                 <section className="flex flex-row flex-nowrap justify-evenly items-center w-full big">
                     <Nav className="">
-                        <Link href="/home">Home</Link>
+                        <Link href="/">Home</Link>
                     </Nav>
                     <Nav className="">
                         <Link className="" href="/dashboard">
