@@ -13,10 +13,14 @@ export default function page() {
         <>
             <Header className={cn("", bgOfBars)} zIndex={60} />
             <Main className="" zIndex={50}>
-                <Spacer variant="cap" />
-                <Spacer variant="bowl" />
-                <Spacer variant="cap-neg" />
-                <Spacer variant="bowl-neg" />
+                <Spacer className="mid" variant="cap" />
+
+                <h1>hello</h1>
+                <Spacer className="big" variant="bowl" />
+                <h1>hello</h1>
+                <Spacer className="all" variant="cap-neg" />
+                <h1>hello</h1>
+                <Spacer className="big" variant="bowl-neg" />
             </Main>
             <Footer className={cn("", bgOfBars)} zIndex={60} />
         </>

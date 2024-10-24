@@ -1,3 +1,4 @@
+import { cn } from "@/lib/utils";
 import React from "react";
 import Bulge_svg from "./Bulge_svg";
 import Cut_svg from "./Cut_svg";
@@ -15,30 +16,42 @@ function Spacer({
     switch (variant) {
         default:
             return (
-                <div>
-                    <Bulge_svg variant="top" />
-                    <Cut_svg variant="cap" />
+                <div
+                    className={cn(className, "content-grid")}
+                    style={{ zIndex: zIndex }}
+                >
+                    <Bulge_svg className="all" variant="top" />
+                    <Cut_svg className="all" variant="cap" />
                 </div>
             );
         case "cap-neg":
             return (
-                <div>
-                    <Cut_svg variant="cap" />
-                    <Bulge_svg variant="top" />
+                <div
+                    className={cn(className, "content-grid")}
+                    style={{ zIndex: zIndex }}
+                >
+                    <Cut_svg className="all" variant="cap" />
+                    <Bulge_svg className="all" variant="top" />
                 </div>
             );
         case "bowl-neg":
             return (
-                <div>
-                    <Bulge_svg variant="bot" />
-                    <Cut_svg variant="bowl" />
+                <div
+                    className={cn(className, "content-grid")}
+                    style={{ zIndex: zIndex }}
+                >
+                    <Bulge_svg className="all" variant="bot" />
+                    <Cut_svg className="all" variant="bowl" />
                 </div>
             );
         case "bowl":
             return (
-                <div>
-                    <Cut_svg variant="bowl" />
-                    <Bulge_svg variant="bot" />
+                <div
+                    className={cn(className, "content-grid")}
+                    style={{ zIndex: zIndex }}
+                >
+                    <Cut_svg className="all" variant="bowl" />
+                    <Bulge_svg className="all" variant="bot" />
                 </div>
             );
     }
