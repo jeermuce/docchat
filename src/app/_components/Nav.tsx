@@ -18,10 +18,15 @@ function Nav({
     return (
         <nav aria-label={aria} className="">
             <ul
-                className={cn(className, "flex", {
-                    "flex-row": variant === "row",
-                    "flex-col": variant === "col",
-                })}
+                className={cn(
+                    className,
+                    "flex",
+                    {
+                        "flex-row": variant === "row",
+                        "flex-col": variant === "col",
+                    },
+                    "h-full ",
+                )}
                 {...props}
             >
                 {React.Children.map(children, (child, index) => (
