@@ -310,6 +310,6 @@ button {
 
 .content-grid > * {
     grid-column: sml-start / sml-end;
-    justify-self: center;
-    align-self: start;
+    /* justify-self: center;
+    align-self: start; */
 }

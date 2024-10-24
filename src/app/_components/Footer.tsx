@@ -1,4 +1,3 @@
-"use client";
 import Link from "next/link";
 import type React from "react";
 import GhLogo from "./GhLogo";
@@ -16,7 +15,7 @@ function Footer({
             style={{ zIndex: zIndex }}
             className={cn(className, "content-grid py-5  w-full ")}
         >
-            <div className="flex flex-row big flex-wrap justify-between w-full ">
+            <div className="flex flex-row flex-wrap justify-between w-full big">
                 <Nav aria="Internal links" variant="col">
                     <Link href="/about">
                         <h4>About</h4>
@@ -34,7 +33,7 @@ function Footer({
                         target="_blank"
                         rel="noreferrer"
                     >
-                        <div className="w-12 rounded-full overflow-hidden">
+                        <div className="overflow-hidden w-12 rounded-full">
                             <GhLogo />
                         </div>
                     </a>

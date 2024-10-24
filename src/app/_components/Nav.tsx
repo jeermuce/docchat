@@ -27,7 +27,7 @@ function Nav({
                 {React.Children.map(children, (child, index) => (
                     <li
                         key={(child as React.ReactElement).key || index}
-                        className="hover:bg-accent hover:text-background  descendants:decoration-0 child:p-2 transition-all ease-in-out duration-100"
+                        className="transition-all duration-100 ease-in-out descendants:decoration-0 child:p-2 hover:bg-accent hover:text-background"
                     >
                         {child}
                     </li>

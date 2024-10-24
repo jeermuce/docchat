@@ -2,7 +2,6 @@ import type { Config } from "tailwindcss";
 import type { PluginAPI } from "tailwindcss/types/config";
 
 const config: Config = {
-    darkMode: ["class"],
     lightMode: ["class"],
     content: [
         "./src/pages/**/*.{js,ts,jsx,tsx,mdx}",

@@ -5,7 +5,7 @@ function GhLogo() {
         <svg
             xmlns="http://www.w3.org/2000/svg"
             viewBox="0 0 98 96"
-            className="w-full h-auto "
+            className="w-full h-auto"
         >
             <title>Source on GitHub</title>
             <path

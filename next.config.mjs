@@ -7,6 +7,8 @@ const config = {
         ignoreDuringBuilds: true,
     },
     reactStrictMode: true,
+
+    expireTime: 60 * 60 * 1000,
 };
 
 export default config;
