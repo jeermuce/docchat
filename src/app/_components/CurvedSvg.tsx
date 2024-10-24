@@ -1,7 +1,7 @@
 import { cn } from "@/lib/utils";
 import React from "react";
 
-function Spacer({
+function CurvedSvg({
     variant = "bowl",
     className,
     zIndex = "inherit",
@@ -41,13 +41,13 @@ function Spacer({
             width="100%"
             height="100%"
             preserveAspectRatio="none"
-            className={cn(className, "h-8 w-full")}
+            className={cn(className, "min-h-8 w-full")}
             style={{ zIndex: zIndex }}
         >
-            <title>spacer</title>
+            <title>CurvedSvg</title>
             {path()}
         </svg>
     );
 }
 
-export default Spacer;
+export default CurvedSvg;
