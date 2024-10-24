@@ -8,11 +8,32 @@ const config: Config = {
         "./src/components/**/*.{js,ts,jsx,tsx,mdx}",
         "./src/app/**/*.{js,ts,jsx,tsx,mdx}",
     ],
+    safelist: [
+        {
+            pattern:
+                /^bg-(background|primary|secondary|accent|foreground)\/[0-9]{1,3}$/,
+        },
+        {
+            pattern: /^bg-(background|primary|secondary|accent|foreground)/,
+        },
+        {
+            pattern:
+                /^bg-(background|primary|secondary|accent|foreground)\/\[[0-9.]+%?\]$/,
+        },
+        {
+            pattern:
+                /^text-(background|primary|secondary|accent|foreground)\/[0-9]{1,3}$/,
+        },
+        {
+            pattern: /^text-(background|primary|secondary|accent|foreground)/,
+        },
+        {
+            pattern:
+                /^text-(background|primary|secondary|accent|foreground)\/\[[0-9.]+%?\]$/,
+        },
+    ],
     theme: {
         extend: {
-            container: {
-                center: "true",
-            },
             colors: {
                 background: "hsl(var(--background))",
                 foreground: "hsl(var(--foreground))",
