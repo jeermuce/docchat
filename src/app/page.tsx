@@ -1,26 +1,31 @@
 import { Button } from "@/components/ui/button";
 import React from "react";
-import Cut from "./_components/Cut";
+
 import Footer from "./_components/Footer";
 import Header from "./_components/Header";
 import Main from "./_components/Main";
+import Spacer from "./_components/Spacer";
 export default function Home() {
     return (
         <>
-            <Header
-                className="bg-background overflow-hidden rounded-ellipse"
-                zIndex={4}
-            />
-            <Cut className="bg-accent" zIndex={3} />
-            <Main className="rounded-ellipse bg-background" zIndex={2}>
+            <Header className="overflow-hidden bg-secondary/70" zIndex={60} />
+            <Main className="py-8 bg-accent" zIndex={50}>
+                <div className="">hello</div>
                 <Button
                     variant={"outline"}
-                    className="absolute top-1/2 left-1/2  -translate-x-1/2 -translate-y-1/2"
+                    className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2"
                 >
                     DocChat is live
                 </Button>
+                {/* <Spacer
+                    className="absolute top-0 all text-background"
+                    variant="cap"
+                />
+                <Spacer
+                    className="absolute top-0 all text-primary/70"
+                    variant="cap"
+                /> */}
             </Main>
-            <Cut className="bg-accent" zIndex={1} />
             <Footer className="bg-background" zIndex={0} />
         </>
     );
