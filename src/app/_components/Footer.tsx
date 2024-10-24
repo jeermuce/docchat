@@ -4,7 +4,7 @@ import GhLogo from "./GhLogo";
 import Nav from "./Nav";
 
 import { cn, extractClassValue } from "@/lib/utils";
-import CurvedSvg from "./CurvedSvg";
+import Cut_svg from "./Cut_svg";
 
 function Footer({
     className,
@@ -14,9 +14,9 @@ function Footer({
     const colorClass = className ? extractClassValue(className, "bg") : "";
     return (
         <div className="w-full h-fit content-grid">
-            <div className="relative all content-grid">
-                <CurvedSvg
-                    className={cn("all", `text-${colorClass}`)}
+            <div className="overflow-hidden relative all content-grid">
+                <Cut_svg
+                    className={cn("all ", `text-${colorClass}`)}
                     variant="bowl"
                     zIndex={zIndex + 2}
                 />

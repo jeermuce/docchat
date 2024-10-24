@@ -1,7 +1,7 @@
 import { cn, extractClassValue } from "@/lib/utils";
 import Link from "next/link";
 import type React from "react";
-import CurvedSvg from "./CurvedSvg";
+import Cut_svg from "./Cut_svg";
 import Nav from "./Nav";
 
 function Header({
@@ -39,9 +39,9 @@ function Header({
                     </Nav>
                 </section>
             </header>
-            <div className="relative all content-grid">
-                <CurvedSvg
-                    className={cn("all  ", `text-${colorClass}`)}
+            <div className="overflow-hidden relative all content-grid">
+                <Cut_svg
+                    className={cn("all ", `text-${colorClass}`)}
                     variant="cap"
                     zIndex={zIndex + 2}
                 />
