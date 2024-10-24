@@ -3,53 +3,68 @@ import type React from "react";
 import GhLogo from "./GhLogo";
 import Nav from "./Nav";
 
-import { cn } from "@/lib/utils";
+import { cn, extractClassValue } from "@/lib/utils";
+import Spacer from "./Spacer";
 
 function Footer({
     className,
-    zIndex,
+    zIndex = 1,
     ...props
 }: { className?: string; zIndex?: number }) {
+    const colorClass = className ? extractClassValue(className, "bg") : "";
     return (
-        <footer
-            style={{ zIndex: zIndex }}
-            className={cn(className, "content-grid py-5  w-full ")}
-        >
-            <div className="flex flex-row flex-wrap justify-between w-full big">
-                <Nav aria="Internal links" variant="col">
-                    <Link href="/about">
-                        <h4>About</h4>
-                    </Link>
-                    <Link href="/contact">
-                        <h4>Contact</h4>
-                    </Link>
-                    <Link href="/privacy">
-                        <h4>Privacy</h4>
-                    </Link>
-                </Nav>
-                <Nav aria="External links" variant="col">
-                    <a
-                        href="https://github.com/jeermuce/docchat "
-                        target="_blank"
-                        rel="noreferrer"
-                    >
-                        <div className="overflow-hidden w-12 rounded-full">
-                            <GhLogo />
-                        </div>
-                    </a>
-                    <a
-                        href="https://docchat-two.vercel.app/"
-                        target="_blank"
-                        rel="noreferrer"
-                    >
-                        <h4>Deployment</h4>
-                    </a>
-                    <Link href="/privacy">
-                        <h4>Privacy</h4>
-                    </Link>
-                </Nav>
+        <div className="w-full h-fit content-grid">
+            <div className="relative min-h-4 all content-grid">
+                <Spacer
+                    className={cn(
+                        "absolute",
+                        "all  min-h-4",
+                        `text-${colorClass}`,
+                    )}
+                    variant="bowl"
+                    zIndex={zIndex + 2}
+                />
             </div>
-        </footer>
+            <footer
+                style={{ zIndex: zIndex }}
+                className={cn(className, "content-grid all")}
+            >
+                <div className="flex flex-row flex-wrap justify-between w-full big">
+                    <Nav aria="Internal links" variant="col">
+                        <Link href="/about">
+                            <h4>About</h4>
+                        </Link>
+                        <Link href="/contact">
+                            <h4>Contact</h4>
+                        </Link>
+                        <Link href="/privacy">
+                            <h4>Privacy</h4>
+                        </Link>
+                    </Nav>
+                    <Nav aria="External links" variant="col">
+                        <a
+                            href="https://github.com/jeermuce/docchat "
+                            target="_blank"
+                            rel="noreferrer"
+                        >
+                            <div className="overflow-hidden w-12 rounded-full">
+                                <GhLogo />
+                            </div>
+                        </a>
+                        <a
+                            href="https://docchat-two.vercel.app/"
+                            target="_blank"
+                            rel="noreferrer"
+                        >
+                            <h4>Deployment</h4>
+                        </a>
+                        <Link href="/privacy">
+                            <h4>Privacy</h4>
+                        </Link>
+                    </Nav>
+                </div>
+            </footer>
+        </div>
     );
 }
 

@@ -1,15 +1,20 @@
 import { Button } from "@/components/ui/button";
 import React from "react";
 
+import { cn } from "@/lib/utils";
 import Footer from "./_components/Footer";
 import Header from "./_components/Header";
 import Main from "./_components/Main";
 import Spacer from "./_components/Spacer";
 export default function Home() {
+    const bgOfBars = "bg-secondary/70";
     return (
         <>
-            <Header className="overflow-hidden bg-secondary/70" zIndex={60} />
-            <Main className="py-8 bg-accent" zIndex={50}>
+            <Header
+                className={cn("overflow-hidden pt-2", bgOfBars)}
+                zIndex={60}
+            />
+            <Main className="py-8" zIndex={50}>
                 <div className="">hello</div>
                 <Button
                     variant={"outline"}
@@ -26,7 +31,10 @@ export default function Home() {
                     variant="cap"
                 /> */}
             </Main>
-            <Footer className="bg-background" zIndex={0} />
+            <Footer
+                className={cn("overflow-hidden pb-2", bgOfBars)}
+                zIndex={60}
+            />
         </>
     );
 }
