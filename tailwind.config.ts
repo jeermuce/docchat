@@ -18,18 +18,10 @@ const config: Config = {
         },
         {
             pattern:
-                /^bg-(background|primary|secondary|accent|foreground)\/\[[0-9.]+%?\]$/,
-        },
-        {
-            pattern:
                 /^text-(background|primary|secondary|accent|foreground)\/[0-9]{1,3}$/,
         },
         {
             pattern: /^text-(background|primary|secondary|accent|foreground)/,
-        },
-        {
-            pattern:
-                /^text-(background|primary|secondary|accent|foreground)\/\[[0-9.]+%?\]$/,
         },
     ],
     theme: {
