@@ -1,8 +1,8 @@
 import { cn, extractClassValue } from "@/lib/utils";
 import Link from "next/link";
 import type React from "react";
+import CurvedSvg from "./CurvedSvg";
 import Nav from "./Nav";
-import Spacer from "./Spacer";
 
 function Header({
     className,
@@ -37,11 +37,11 @@ function Header({
                     </Nav>
                 </div>
             </header>
-            <div className="relative bg-transparent all content-grid">
-                <Spacer
-                    className={cn("", "all min-h-4", `text-${colorClass}`)}
+            <div className="relative all content-grid">
+                <CurvedSvg
+                    className={cn("all  ", `text-${colorClass}`)}
                     variant="cap"
-                    zIndex={zIndex}
+                    zIndex={zIndex + 2}
                 />
             </div>
         </div>

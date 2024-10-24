@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import localFont from "next/font/local";
 import "./globals.css";
 import { Button } from "@/components/ui/button";
+import Head from "next/head";
 
 export const metadata: Metadata = {
     title: "DocChat",
@@ -27,6 +28,9 @@ export default function RootLayout({
 }>) {
     return (
         <html lang="en">
+            <Head>
+                <link rel="stylesheet" href="./globals.css" />
+            </Head>
             <body
                 className={`${geistSans.variable} ${geistMono.variable} antialiased`}
             >
@@ -40,7 +44,7 @@ export default function RootLayout({
                     >
                         <Button
                             variant={"destructive"}
-                            className="absolute top-1/2 left-1/2  -translate-x-1/2 -translate-y-1/2"
+                            className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2"
                         >
                             DocChat is dead, please click here to rise an issue
                         </Button>

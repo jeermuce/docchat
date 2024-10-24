@@ -2,10 +2,10 @@ import { Button } from "@/components/ui/button";
 import React from "react";
 
 import { cn } from "@/lib/utils";
+import CurvedSvg from "./_components/CurvedSvg";
 import Footer from "./_components/Footer";
 import Header from "./_components/Header";
 import Main from "./_components/Main";
-import Spacer from "./_components/Spacer";
 export default function Home() {
     const bgOfBars = "bg-secondary/70";
     return (
@@ -14,7 +14,7 @@ export default function Home() {
                 className={cn("overflow-hidden pt-2", bgOfBars)}
                 zIndex={60}
             />
-            <Main className="py-8" zIndex={50}>
+            <Main className="" zIndex={50}>
                 <div className="">hello</div>
                 <Button
                     variant={"outline"}
@@ -22,11 +22,11 @@ export default function Home() {
                 >
                     DocChat is live
                 </Button>
-                {/* <Spacer
+                {/* <CurvedSvg
                     className="absolute top-0 all text-background"
                     variant="cap"
                 />
-                <Spacer
+                <CurvedSvg
                     className="absolute top-0 all text-primary/70"
                     variant="cap"
                 /> */}

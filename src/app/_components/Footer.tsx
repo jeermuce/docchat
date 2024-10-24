@@ -4,7 +4,7 @@ import GhLogo from "./GhLogo";
 import Nav from "./Nav";
 
 import { cn, extractClassValue } from "@/lib/utils";
-import Spacer from "./Spacer";
+import CurvedSvg from "./CurvedSvg";
 
 function Footer({
     className,
@@ -14,13 +14,9 @@ function Footer({
     const colorClass = className ? extractClassValue(className, "bg") : "";
     return (
         <div className="w-full h-fit content-grid">
-            <div className="relative min-h-4 all content-grid">
-                <Spacer
-                    className={cn(
-                        "absolute",
-                        "all  min-h-4",
-                        `text-${colorClass}`,
-                    )}
+            <div className="relative all content-grid">
+                <CurvedSvg
+                    className={cn("all", `text-${colorClass}`)}
                     variant="bowl"
                     zIndex={zIndex + 2}
                 />
